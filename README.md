@@ -9,8 +9,13 @@ virtual. Esto es solo el código.
 
 ## Cómo empezar
 
-1. **Haz un fork** de este repositorio con el botón *Fork* de GitHub. Uno por
-   grupo: trabajad los dos sobre el mismo fork.
+1. **Crea tu repositorio a partir de esta plantilla** con el botón
+   *Use this template → Create a new repository*, y márcalo como **Private**.
+   No hagas un *fork*: un fork de un repositorio público es público, y tu
+   código quedaría a la vista de todos. Uno por grupo: quien lo crea añade a
+   su compañero en *Settings → Collaborators*.
+   Si ya hiciste un fork, mira [más abajo](#si-ya-hiciste-un-fork) cómo
+   pasarlo a privado.
 2. Clónalo en tu máquina:
 
    ```bash
@@ -106,10 +111,28 @@ terminar cada una, así que **no tocan tus datos**.
 
 ## La entrega
 
-El fork es para trabajar. La entrega es la que dice el enunciado: un **ZIP**
+Tu repositorio es para trabajar. La entrega es la que dice el enunciado: un **ZIP**
 con la carpeta del proyecto —`ODM.py`, `models.yml` y un `.json` por
 colección con el volcado de la base— nombrado
 `P1_G<grupo>_Nombre_Apellido-Nombre_Apellido.zip`.
+
+## Si ya hiciste un fork
+
+GitHub no deja hacer privado un fork de un repositorio público, así que hay que
+mover el trabajo a un repositorio nuevo, sin perder la historia:
+
+1. Crea un repositorio **vacío** y **privado** con *New repository*: sin
+   README, sin `.gitignore` y sin licencia.
+2. Desde la carpeta de tu clon, apúntalo al repositorio nuevo y sube todo:
+
+   ```bash
+   git remote set-url origin https://github.com/<tu-usuario>/<repositorio-nuevo>.git
+   git push -u origin main
+   ```
+
+3. Añade a tu compañero en *Settings → Collaborators*.
+4. Comprueba que el repositorio nuevo tiene tus commits y **borra el fork**:
+   *Settings → Danger Zone → Delete this repository*.
 
 ## Si algo no arranca
 
